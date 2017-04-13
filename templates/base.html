@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Build-a-Blog</title>
+    </head>
+
+    <style type='text/css'>
+    body {
+        font-family: sans-serif;
+        width: 800px;
+        margin: 0 auto;
+        padding: 10px;
+        background-color: #e2d1be;
+    }
+    .error  {
+        color: red;
+    }
+    label   {
+        display: block;
+        font-size: 20px;
+    }
+    input[type=text]    {
+        width: 400px;
+        font-size: 20px;
+        padding: 2px;
+    }
+    textarea    {
+        width: 400px;
+        height: 200px;
+        font-size: 17px;
+        font-family: monospace;
+    }
+    input[type=submit]  {
+        font-size: 24px;
+    }
+    hr  {
+        margin: 20px auto;
+    }
+    .blogpost + .blogpost {
+        margin-top: 20px;
+    }
+    .
+    .blogpost-title   {
+        font-weight: bold;
+        font-size: 20px;
+    }
+    .blogpost-body   {
+        margin: 0;
+        font-size: 17px;
+    }
+    a:link {
+        color: #0c6d3b;
+        text-decoration: none;
+    }
+    a:visited{
+        color:#0c6d3b;
+    }
+    a:hover {
+        color:#4f5150;
+    }
+
+    </style>
+
+    <body>
+        <h1>
+            <a href='/'>Build A Blog</a>
+        </h1>
+        <ul>
+            <li><a href="/newpost">Create a new blog entry</a></li>
+            <li><a href="/blog">Most recent postings</a></li>
+        </ul>
+        <hr>
+        {% block content %}
+        {% endblock %}
+
+
+    </body>
+</html>
